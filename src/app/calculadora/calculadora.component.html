@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d-flex justify-content-center">
+        <div class="w-50">
+            <div class="mb-3">
+                <label for="inputNumber" class="mx-2">Primer numero:</label>
+                <input id="inputNumber" type="number" [(ngModel)]="numero1"/>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="mb-3">
+                <label for="inputNumber" class="mx-2">Segundo numero:</label>
+                <input id="inputNumber" type="number" [(ngModel)]="numero2"/>
+            </div>
+            
+            
+            <div class="mb-3">
+                <div class="alert alert-success mt-4">
+                    Resultado: {{ sumar() }}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
