@@ -8,24 +8,9 @@
 <body>
     <div class="d-flex justify-content-center">
         <div class="w-50">
-            <div class="mb-3">
-                <label for="inputNumber" class="mx-2">Primer numero:</label>
-                <input id="inputNumber" type="number" [(ngModel)]="numero1"/>
-            </div>
-
-            <br>
-            <br>
-
-            <div class="mb-3">
-                <label for="inputNumber" class="mx-2">Segundo numero:</label>
-                <input id="inputNumber" type="number" [(ngModel)]="numero2"/>
-            </div>
-            
-            
-            <div class="mb-3">
-                <div class="alert alert-success mt-4">
-                    Resultado: {{ sumar() }}
-                </div>
+            <div class="mt-3">
+                <app-formulario (resultadoEvent)="actualizarResultado($event)"></app-formulario>
+                <app-resultado [resulradoHijo]="resultadoPadre"></app-resultado>  
             </div>
         </div>
     </div>
